@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from './styles/button'
+import Form from './styles/form'
 
 export class AddEmployee extends React.Component<{}, Istate> {
 constructor(props: {}){
@@ -40,7 +41,6 @@ constructor(props: {}){
     handleSubmit = (e:any) =>{
         alert(`${this.state.name} registered successfully!`);
         console.log(this.state);
-        
         this.setState({
             name: '',
             date_of_birth: '',
@@ -49,6 +49,7 @@ constructor(props: {}){
         });
         e.preventDefault();
     }
+
    
 //  async   handleSubmit(e: any){
 //         e.preventDefault();
@@ -70,7 +71,7 @@ constructor(props: {}){
 
     render(){
         return (
-            <form onSubmit = {this.handleSubmit}>
+            <Form onSubmit = {this.handleSubmit}>
                 <div>
                     <label>Full name</label>
                     <input type="text"
@@ -110,8 +111,9 @@ constructor(props: {}){
 
                 <Button type="submit">Register</Button>
 
-            </form>
+            </Form>
         )
+           
     }
 
 }

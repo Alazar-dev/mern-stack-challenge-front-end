@@ -1,10 +1,12 @@
 import React from 'react';
+import Title from './components/styles/header';
+import Main from './components/styles/app';
 
 function App() {
   return (
-    <div>
-      <h1>Employee Registration Form</h1>
-    </div>
+    <Main>
+      <Title>Employee Registration Form</Title>
+    </Main>
   );
 }
 
